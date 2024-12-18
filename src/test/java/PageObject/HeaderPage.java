@@ -18,50 +18,30 @@ public class HeaderPage {
     }
 
     // Кнопка город Северодвиснк в шапке сайта
-    private final By cityLocationSeverodvinsk = xpath(".//span[text()='Северодвиснк']");
+    public final By cityLocationSeverodvinsk = xpath(".//span[text()='Северодвинск']");
     // Кнопка город Архангельск в шапке сайта
-    private final By cityLocationArchangelsk = xpath(".//span[text()='Архангельск']");
+    public final By cityLocationArchangelsk = xpath(".//span[text()='Архангельск']");
     // Кнопка город Новодвинск в шапке сайта
-    private final By cityLocationNovodvinsk = xpath(".//span[text()='Новодвинск']");
+    public final By cityLocationNovodvinsk = xpath(".//span[text()='Новодвинск']");
     // Кнопка Оплата и доставка в шапке сайта
-    private final By buttonPaymentDelivery = xpath(".//a[@title='Оплата и доставка']");
+    public final By buttonPaymentDelivery = xpath(".//a[@title='Оплата и доставка']");
     // Кнопка Контакты и схема проезда в шапке сайта
-    private final By buttonContactsDirections = xpath(".//a[@title='Контакты и схема проезда']");
+    public final By buttonContactsDirections = xpath(".//a[@title='Контакты и схема проезда']");
     // Кнопка Бонусная программа в шапке сайта
-    private final By buttonBonusProgramm = xpath(".//a[@title='Бонусная программа']");
+    public final By buttonBonusProgramm = xpath(".//a[@title='Бонусная программа']");
     // Кнопка выпадающего меню в шапке сайта
-    private final By buttonMenuHeader = xpath("//button[contains(@class, 'top-menu__btn') and contains(@class, 'dropdown-toggle')]");
+    public final By buttonMenuHeader = xpath("//button[contains(@class, 'top-menu__btn') and contains(@class, 'dropdown-toggle')]");
     // Окно выбора города в шапке сайта
-    private final By windowCitySelection = xpath(".//div[@class='modal-dialog modal-lg']");
+    public final By windowCitySelection = xpath(".//div[@class='modal-dialog modal-lg']");
+    //
+    public final By firstWindowCitiesSelection = xpath(".//div[@class='modal-content']");
     // Кнопка выбора города Северодвинск
-    private final By buttonCitySeverodvinsk = xpath("//a[text()='Северодвинск']");
+    public final By buttonCitySeverodvinsk = xpath("//a[text()='Северодвинск']");
     // Кнопка выбора города Архангельск
-    private final By buttonCityArchangelsk = xpath("//a[text()='Архангельск']");
+    public final By buttonCityArchangelsk = xpath("//a[text()='Архангельск']");
     // Кнопка выбора города Новодвинск
-    private final By buttonCityNovodvinsk = xpath("//a[text()='Новодвинск']");
-    @Step("Клик по копке выбора города Северодвиснк")
-    public void clickButtonCitySeverodvinsk(){
-        driver.findElement(buttonCitySeverodvinsk).click();
-    }
-    @Step("Клик по копке выбора города Архангельск")
-    public void clickButtonCityArchangelsk(){
-        driver.findElement(buttonCityArchangelsk).click();
-    }
-    @Step("Клик по копке выбора города Новодвинск")
-    public void clickButtonCityNovodvinsk(){
-        driver.findElement(buttonCityNovodvinsk).click();
-    }
-    @Step("Отображение выбранного города Северодвинск")
-    public void displayCitySeverodvinsk(){
-        driver.findElement(cityLocationSeverodvinsk).isDisplayed();
-    }
-    @Step("Отображение выбранного города Архангельск")
-    public void displayCityArchangelsk(){
-        driver.findElement(cityLocationSeverodvinsk).isDisplayed();
-    }
-    @Step("Отображение выбранного города Новодвинск")
-    public void displayCityNovodvinsk(){
-        driver.findElement(cityLocationSeverodvinsk).isDisplayed();
-    }
+    public final By buttonCityNovodvinsk = xpath("//a[text()='Новодвинск']");
+    // Кнопка закрытия окна выбора города
+    public final By buttonCityCLose = xpath("//button[@class='close']");
 
 }
