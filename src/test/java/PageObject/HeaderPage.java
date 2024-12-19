@@ -42,6 +42,6 @@ public class HeaderPage {
     // Кнопка выбора города Новодвинск
     public final By buttonCityNovodvinsk = xpath("//a[text()='Новодвинск']");
     // Кнопка закрытия окна выбора города
-    public final By buttonCityCLose = xpath("//button[@class='close']");
+    public final By buttonCityCLose = xpath("//button[text()='×']");
 
 }

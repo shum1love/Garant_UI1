@@ -33,13 +33,15 @@ public class HeaderPageSteps {
     }
     @Step("Клик по копке закрытия окна выбора города")
     public void clickButtonCityCLose(){
-        driver.findElement(headerPage.buttonCityCLose);
+        driver.findElement(headerPage.buttonCityCLose).click();
     }
 
     // Отображение
     @Step("Отображение всплывающего окна выбора города")
-    public boolean displayFirstWindowCitiesSelection(){
-        return driver.findElement(headerPage.firstWindowCitiesSelection).isDisplayed();
+    public boolean displayFirstWindowCitiesSelection() {
+        // Проверяем, есть ли элемент на странице
+        //Метод возвращает true, если элемент существует, и false, если его нет
+        return !driver.findElements(headerPage.firstWindowCitiesSelection).isEmpty();
     }
     @Step("Отображение выбранного города Северодвинск")
     public boolean displayCitySeverodvinsk(){

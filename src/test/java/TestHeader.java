@@ -7,7 +7,8 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import PageObject.HeaderPageSteps;
 import static io.restassured.RestAssured.given;
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
+
 public class TestHeader {
     private WebDriver driver;
     private HeaderPageSteps headerPageSteps;
@@ -48,12 +49,12 @@ public class TestHeader {
     }
     @Test
     @DisplayName("Тест 4: Закрытие окна выбора города")
-    @Description("Проверка на закрытие оуна выбора города при нажатии на крестик")
+    @Description("Проверка на закрытие окна выбора города при нажатии на крестик")
     public void testCloseSelectCity(){
         headerPageSteps.waitButtonCitySeverodvinsk();
         headerPageSteps.clickButtonCityCLose();
         headerPageSteps.waitFirstWindowCitiesSelection();
-        assertEquals(headerPageSteps.displayFirstWindowCitiesSelection(), false);
+        assertFalse("Окно выбора города должно быть закрыто", headerPageSteps.displayFirstWindowCitiesSelection());
     }
     @After
     public void rearDown(){
