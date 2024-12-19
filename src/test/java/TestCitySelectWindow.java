@@ -1,18 +1,18 @@
 import SupportClasses.Browser;
-import io.qameta.allure.junit4.DisplayName;
 import jdk.jfr.Description;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.AfterEach;
 import org.openqa.selenium.WebDriver;
 import PageObject.HeaderPageSteps;
-import static io.restassured.RestAssured.given;
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
-public class TestHeader {
+public class TestCitySelectWindow {
     private WebDriver driver;
     private HeaderPageSteps headerPageSteps;
-    @Before
+    @BeforeEach
     public void setUp(){
         // Создаем WebDriver через класс SupportClasses.Browser
         driver = Browser.createWebDriver();
@@ -56,7 +56,7 @@ public class TestHeader {
         headerPageSteps.waitFirstWindowCitiesSelection();
         assertFalse("Окно выбора города должно быть закрыто", headerPageSteps.displayFirstWindowCitiesSelection());
     }
-    @After
+    @AfterEach
     public void rearDown(){
         driver.quit();
     }

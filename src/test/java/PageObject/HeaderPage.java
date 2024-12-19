@@ -43,5 +43,11 @@ public class HeaderPage {
     public final By buttonCityNovodvinsk = xpath("//a[text()='Новодвинск']");
     // Кнопка закрытия окна выбора города
     public final By buttonCityCLose = xpath("//button[text()='×']");
+    //Кнопка Мне больше 18 лет в окне подтверждения возраста
+    public final By buttonMoreEighteen = xpath("//button[text()='Мне больше 18 лет']");
+    //Кнопка Мне меньше 18 лет в окне подтверждения возраста
+    public final By buttonLessEighteen = xpath("//button[text()='Мне меньше 18 лет']");
+    //Кнопка закрытия крестик в окне подтверждения возраста
+    public final By buttonCloseAge = xpath("//button[text()='×']");
 
 }
