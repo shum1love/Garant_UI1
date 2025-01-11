@@ -57,9 +57,9 @@ public class HeaderPageSteps {
     }
 
     //Ожидания
-    @Step("Ожидание, что кнопка выбора города Северодвинск станет видимой")
+    @Step("Ожидание, что окно выбора города станет видимым")
     public void waitFirstWindowCitiesSelection() {
-        wait.until(ExpectedConditions.invisibilityOfElementLocated(headerPage.firstWindowCitiesSelection));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(headerPage.firstWindowCitiesSelection));
     }
     @Step("Ожидание, что кнопка выбора города Северодвинск станет видимой")
     public void waitButtonCitySeverodvinsk() {

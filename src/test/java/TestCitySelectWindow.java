@@ -21,6 +21,13 @@ public class TestCitySelectWindow {
         headerPageSteps = new HeaderPageSteps(driver);
     }
     @Test
+    @DisplayName("Тест 0: Окно выбора города")
+    @Description("Проверка отображения окна выбора города при первичном заходе на сайт незарегистрированному пользователю")
+    public void testDisplayCitySelection(){
+        headerPageSteps.waitFirstWindowCitiesSelection();
+        assertEquals(headerPageSteps.displayFirstWindowCitiesSelection(), true);
+    }
+    @Test
     @DisplayName("Тест 1: Выбор города при входе на сайт незарегистрированным пользователем")
     @Description("Проверка отображения выбранного города в шапке сайта: Северодвинск")
     public void testDisplayCitySeverodvinsk(){
@@ -54,7 +61,7 @@ public class TestCitySelectWindow {
         headerPageSteps.waitButtonCitySeverodvinsk();
         headerPageSteps.clickButtonCityCLose();
         headerPageSteps.waitFirstWindowCitiesSelection();
-        assertFalse("Окно выбора города должно быть закрыто", headerPageSteps.displayFirstWindowCitiesSelection());
+        assertFalse(headerPageSteps.displayFirstWindowCitiesSelection(), "Окно выбора города должно быть закрыто");
     }
     @AfterEach
     public void rearDown(){

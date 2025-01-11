@@ -33,7 +33,7 @@ public class HeaderPage {
     public final By buttonMenuHeader = xpath("//button[contains(@class, 'top-menu__btn') and contains(@class, 'dropdown-toggle')]");
     // Окно выбора города в шапке сайта
     public final By windowCitySelection = xpath(".//div[@class='modal-dialog modal-lg']");
-    //
+    // Окно выбора города для неавторизированных пользователей при первичном заходе на сайт
     public final By firstWindowCitiesSelection = xpath(".//div[@class='modal-content']");
     // Кнопка выбора города Северодвинск
     public final By buttonCitySeverodvinsk = xpath("//a[text()='Северодвинск']");
